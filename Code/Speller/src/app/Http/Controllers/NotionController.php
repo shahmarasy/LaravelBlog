@@ -9,12 +9,12 @@ use Illuminate\Http\Request;
 
 class NotionController extends Controller
 {
-    private string $api = "v02%3Auser_token_or_cookies%3AZUBnyn8u1N3OKomoLRcl0m2DTA9QjzbLbqGDPkjKhWjhDI-7apfbhYS9OVg6BA00PFTkNkuT5HNS4rmfYJzB7W8bHfSwDawy5eAxtEYpGGzEl7_wkftY9B4rBGwPhM8gWpPE";
+    private string $api = "_token_First";
 
     public function fix(Request $request): JsonResponse
     {
 
-        $notion = new NotionAi($this->api, '6a7ce389-6550-45d9-916a-bb5d60b8d4f6');
+        $notion = new NotionAi($this->api, '_token_Second');
         $client = new Client();
         $notion->setClient($client);
 
